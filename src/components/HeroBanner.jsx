@@ -9,7 +9,11 @@ export function HeroBanner({ featuredCharacter }) {
             <img
               src={featuredCharacter.image}
               alt={featuredCharacter.name}
+              width={640}
+              height={800}
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </div>

@@ -14,7 +14,7 @@ export function useFetchCharacters() {
         setLoading(true)
 
         await new Promise((resolve, reject) => {
-          const timeout = setTimeout(resolve, 700)
+          const timeout = setTimeout(resolve, 120)
 
           controller.signal.addEventListener('abort', () => {
             clearTimeout(timeout)

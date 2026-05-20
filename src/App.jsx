@@ -30,7 +30,10 @@ function App() {
   const searchInputRef = useRef(null)
 
   useEffect(() => {
-    searchInputRef.current?.focus()
+    const id = requestAnimationFrame(() => {
+      searchInputRef.current?.focus({ preventScroll: true })
+    })
+    return () => cancelAnimationFrame(id)
   }, [])
 
   useEffect(() => {

@@ -2,7 +2,14 @@ export function CharacterCard({ character, isFavorite, onToggleFavorite }) {
   return (
     <article className={`character-card ${isFavorite ? 'is-favorite' : ''}`}>
       <div className="character-image">
-        <img src={character.image} alt={character.name} loading="lazy" />
+        <img
+          src={character.image}
+          alt={character.name}
+          width={640}
+          height={360}
+          loading="lazy"
+          decoding="async"
+        />
         <span className="element-badge" data-element={character.element}>
           {character.element}
         </span>
